@@ -41,7 +41,7 @@ class App extends Component {
       stamped.add(text)
     }
 
-    if (stamped.size > 2) {
+    if (stamped.size === 25) {
       const audio = new Audio('bingo.wav')
       audio.play()
     }
