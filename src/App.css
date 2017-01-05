@@ -40,7 +40,7 @@ td {
 .stamped {
   position: relative;
 }
-.stamped:before {
+.stamped::before {
   position: absolute;
   content: "";
   left: 0;
@@ -48,9 +48,13 @@ td {
   right: 0;
   border-top: 8px solid;
   border-color: red;
-  transform:rotate(-30deg);
+  transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
 }
-.stamped:after {
+.stamped::after {
   position: absolute;
   content: "";
   left: 0;
@@ -58,5 +62,9 @@ td {
   right: 0;
   border-top: 8px solid;
   border-color: red;
-  transform:rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
 }
