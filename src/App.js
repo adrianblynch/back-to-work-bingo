@@ -27,7 +27,8 @@ class App extends Component {
   }
 
   shout = () => {
-
+    const audio = new Audio('bingo.wav')
+    audio.play()
   }
 
   stamp = (e) => {
@@ -42,8 +43,7 @@ class App extends Component {
     }
 
     if (stamped.size === 25) {
-      const audio = new Audio('bingo.wav')
-      audio.play()
+      this.shout()
     }
 
     this.setState({ stamped: Array.from(stamped) })
@@ -52,6 +52,9 @@ class App extends Component {
   render() {
     return (
       <table>
+        <thead>
+          <tr><th colSpan="5">Back to Work Bingo</th></tr>
+        </thead>
         <tbody>
           {
             this.state.data.map((row, i) => {
